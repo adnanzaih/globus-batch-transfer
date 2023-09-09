@@ -17,6 +17,7 @@ class FileRenamer:
                 self.source_directory = data['source_directory']
                 self.staging_directory = data['staging_directory']
                 self.time_difference_min = data['time_difference_min']
+                self.file_ext = data['file_ext']
 
                 print(f"Watching source directory ... ",{self.source_directory})
         except FileNotFoundError:
@@ -33,7 +34,7 @@ class FileRenamer:
 
                 try:
                     # Check if the file ends with .dat and doesn't have "PREFIX_" in its name
-                    if filename.endswith(".dat") and "DONE_" not in filename:
+                    if filename.endswith(self.file_ext) and "DONE_" not in filename:
                         # Get the modification time of the file in UTC
                         utc_now = datetime.datetime.utcnow()
                         modification_time = datetime.datetime.utcfromtimestamp(os.path.getmtime(file_path))
