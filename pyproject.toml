@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Tool to automate file transfer between globus endpoints. Moves data in source directory to destination, and deletes source after successful transfer."
 authors = ["Adnan Hafeez"]
 readme = "README.md"
-license = "GNU"
+license = "GPL-3.0 license"
 
 [tool.poetry.dependencies]
 python = "^3.9"
