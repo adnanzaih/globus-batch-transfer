@@ -2,7 +2,11 @@
 ### Requirements
   * Python >= 3.9
   * Poetry
-### Installation
+### Install
+    $ pip install globus-batch-transfer
+    $ pip install --upgrade globus-batch-transfer
+    $ pip uninstall globus-batch-transfer
+### Build From Source
     1. $ git clone https://github.com/adnanzaih/globus-batch-transfer.git ; cd globus_batch_transfer/
     2. $ poetry install
 ### Execution
