@@ -16,7 +16,7 @@ class FileRenamer:
                 data = yaml.load(f, yaml.Loader)
                 self.source_directory = data['source_directory']
                 self.staging_directory = data['staging_directory']
-                self.time_difference_min = data['time_difference_min']
+                self.time_difference_sec = data['time_difference_sec']
                 self.file_ext = data['file_ext']
 
                 print(f"Watching source directory ... ",{self.source_directory})
@@ -43,7 +43,7 @@ class FileRenamer:
                         time_difference = (utc_now - modification_time).total_seconds()
 
                         # If the file hasn't been modified for 5 seconds, rename it
-                        if time_difference > self.time_difference_min:
+                        if time_difference > self.time_difference_sec:
                             # Generate a new name with a prefix
                             new_name = f"DONE_{filename}"
 
@@ -73,7 +73,7 @@ class FileMover:
                 data = yaml.load(f, yaml.Loader)
                 self.source_directory = data['source_directory']
                 self.staging_directory = data['staging_directory']
-                self.time_difference_min = data['time_difference_min']
+                self.time_difference_sec = data['time_difference_sec']
                 self.source_endpoint = data['source_endpoint']
                 self.source_path = data['source_path']
                 self.destination_endpoint = data['destination_endpoint']
