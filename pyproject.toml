@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "globus-batch-transfer"
-version = "0.1.0"
+version = "0.2.0"
 description = "Tool to automate file transfer between globus endpoints. Moves data in source directory to destination, and deletes source after successful transfer."
 authors = ["Adnan Hafeez"]
 readme = "README.md"
